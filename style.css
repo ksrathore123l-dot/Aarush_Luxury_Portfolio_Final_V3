@@ -582,7 +582,7 @@ section {
 .conditions,
 .education,
 .locations {
-    background: #0c0d12
+    background: #dedfe4;
 }
 
 .section-label {
@@ -622,14 +622,65 @@ section {
     color: var(--gold)
 }
 
+.para-1 {
+    color: #000000;
+}
+
+.second-heading {
+    color: #192323;
+}
+
+.clinic-dark-bg {
+    background: #0b0c10 !important;
+    /* Premium dark/black background */
+}
+
+.clinic-heading {
+    color: var(--white);
+}
+
+.clinic-text {
+    color: #d5d3ce;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Contact Section Updates */
+.appointment-white-bg {
+    background: #ffffff !important;
+}
+
+.contact-heading {
+    color: #000000;
+}
+
+.contact-text {
+    color: #414141;
+}
+
+.contact-list {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.contact-list span {
+    color: #666666 !important;
+}
+
+.contact-list b,
+.contact-list a {
+    color: #000000 !important;
+}
+
 .about h3 {
     font-size: 14px;
-    color: #e1dcd3;
+    color: #414141;
     margin: 22px 0
 }
 
 .about p {
-    color: #a5a4aa;
+    color: #000000;
+
     line-height: 1.8;
     font-size: 14px;
     max-width: 650px;
@@ -641,15 +692,15 @@ section {
     padding: 20px;
     border: 1px solid rgba(214, 180, 119, .3);
     border-radius: 16px;
-    background: linear-gradient(110deg, rgba(214, 180, 119, .05), rgba(139, 92, 246, .04));
+    background: linear-gradient(110deg, rgb(9 9 9 / 5%), rgb(0 0 0 / 4%));
     font: italic 18px/1.5 "Playfair Display";
-    color: #e9e4da
+    color: #312e26;
 }
 
 .quote b {
     display: block;
     font: 600 10px "DM Sans";
-    color: var(--gold);
+    color: #c48b25;
     margin-top: 10px
 }
 
@@ -672,7 +723,7 @@ section {
 .stats strong {
     display: block;
     font: 700 25px "Playfair Display";
-    color: var(--gold2)
+    color: #f2c161;
 }
 
 .stats span {
@@ -683,7 +734,7 @@ section {
 .about-card {
     border: 1px solid var(--line);
     border-radius: 28px;
-    background: linear-gradient(145deg, #14151d, #0b0c10);
+    background: linear-gradient(145deg, #14151d, #6e6e6e);
     padding: 16px;
     box-shadow: var(--shadow)
 }
@@ -775,7 +826,7 @@ section {
 }
 
 .dark {
-    background: #07080c
+    background: #242526;
 }
 
 .split-head {
@@ -960,7 +1011,7 @@ section {
 .edu-card {
     border: 1px solid var(--line);
     border-radius: 22px;
-    background: #11131a;
+    background: #484b53;
     overflow: hidden
 }
 
@@ -1022,7 +1073,7 @@ section {
 }
 
 .edu-card.video {
-    background: linear-gradient(145deg, #171022, #0e1015)
+    background: #484b53;
 }
 
 .location-grid {
@@ -1194,6 +1245,10 @@ form {
     border: 1px solid var(--line);
     border-radius: 24px;
     padding: 30px
+}
+
+form.black-form {
+    background: #000000;
 }
 
 form h3 {
@@ -1525,9 +1580,40 @@ footer>div>p {
         flex-wrap: wrap
     }
 }
+
 /* Floating Contact Buttons */
-.floating-contact { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 12px; z-index: 100; }
-.float-btn { width: 55px; height: 55px; border-radius: 50%; display: grid; place-items: center; color: white; box-shadow: 0 10px 25px rgba(0,0,0,0.4); transition: 0.3s; cursor: pointer; }
-.float-btn:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
-.wa-btn { background: #25D366; }
-.call-btn { background: linear-gradient(135deg, var(--gold2), var(--gold)); color: #090a0e; }
+.floating-contact {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 100;
+}
+
+.float-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.float-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.wa-btn {
+    background: #25D366;
+}
+
+.call-btn {
+    background: linear-gradient(135deg, var(--gold2), var(--gold));
+    color: #090a0e;
+}
