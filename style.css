@@ -1559,7 +1559,10 @@ footer>div>p {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 12px 5px;
+        padding: 12px 10px !important; /* Force symmetric padding */
+    }
+    .stats div+div {
+        border-left: 1px solid var(--line);
     }
     .stats strong {
         font-size: 20px;
@@ -1579,6 +1582,7 @@ footer>div>p {
     }
     .tabs {
         justify-content: center;
+        flex-wrap: wrap; /* Ensure tabs don't overflow horizontally */
     }
     .outline-btn {
         margin: 15px auto 0;
