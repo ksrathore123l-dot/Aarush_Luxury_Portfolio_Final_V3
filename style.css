@@ -1483,61 +1483,80 @@ footer>div>p {
 
 @media(max-width:560px) {
     section {
-        padding: 85px 0
+        padding: 50px 0
     }
 
     .hero h1 {
-        font-size: clamp(35px, 8vw, 45px);
+        font-size: clamp(30px, 8vw, 40px);
     }
 
     .hero-tag {
-        font-size: 20px
+        font-size: 16px
     }
 
     .chips {
-        gap: 7px
+        gap: 5px;
+        flex-wrap: wrap;
     }
 
     .chips span {
         font-size: 8px
     }
 
+    .hero-grid,
+    .about-grid,
+    .why-grid,
+    .location-grid,
+    .appointment-grid {
+        gap: 35px
+    }
+
+    .about h2,
+    .split-head h2,
+    .why h2,
+    .locations h2,
+    .appointment h2,
+    .contact-heading,
+    .second-heading {
+        font: 700 clamp(32px, 8vw, 42px)/1.1 "Playfair Display" !important;
+    }
+
     .hero-person {
-        height: 450px
+        height: 380px
     }
 
     .person-placeholder {
-        height: 440px;
+        height: 360px;
         width: 100%
     }
 
     .r1 {
-        width: 390px;
-        height: 170px
+        width: 320px;
+        height: 140px
     }
 
     .r2 {
-        width: 450px;
-        height: 190px
+        width: 360px;
+        height: 160px
     }
 
     .float-stat {
-        transform: scale(.78)
+        transform: scale(.65)
     }
 
     .s1 {
-        left: -15px;
-        top: 40px
+        left: -20px;
+        top: 20px
     }
 
     .s2 {
-        right: -15px;
-        top: 150px
+        right: -20px;
+        top: 120px
     }
 
     .s3 {
-        left: -10px;
-        bottom: 35px
+        left: -15px;
+        bottom: 25px
     }
 
     .service-grid {
@@ -1553,7 +1572,8 @@ footer>div>p {
     }
 
     .two {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .actions {
@@ -1567,8 +1587,14 @@ footer>div>p {
         justify-content: center
     }
 
+    .map-container,
     .map {
-        height: 390px
+        min-height: 300px !important;
+        height: 300px
+    }
+
+    form {
+        padding: 20px;
     }
 
     footer .footer-top {
@@ -1577,7 +1603,19 @@ footer>div>p {
 
     footer .footer-top>div:last-child {
         margin-top: 20px;
-        flex-wrap: wrap
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .floating-contact {
+        bottom: 15px;
+        right: 15px;
+        gap: 10px;
+    }
+
+    .float-btn {
+        width: 45px;
+        height: 45px;
     }
 }
 
