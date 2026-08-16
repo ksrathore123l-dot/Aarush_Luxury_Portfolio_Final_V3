@@ -1431,6 +1431,13 @@ footer>div>p {
         padding: 0 18px
     }
 
+    .header.menu-open {
+        backdrop-filter: none !important;
+        background: #08090d !important;
+        height: 100vh !important;
+        align-items: flex-start !important;
+    }
+
     .header nav {
         position: fixed;
         inset: 0;

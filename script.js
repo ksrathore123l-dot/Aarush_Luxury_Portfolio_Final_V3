@@ -4,11 +4,11 @@ addEventListener("scroll", () => $("#header").classList.toggle("scrolled", scrol
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("active"); io.unobserve(e.target) } }), { threshold: .12 });
 $$(".reveal,.reveal-right").forEach(x => io.observe(x));
 document.addEventListener("mousemove", e => { $(".cursor").style.left = e.clientX + "px"; $(".cursor").style.top = e.clientY + "px" });
-$("#menu").onclick = () => $("#nav").classList.toggle("open");
-$$("#nav a").forEach(a => a.onclick = () => $("#nav").classList.remove("open"));
+$("#menu").onclick = () => { $("#nav").classList.toggle("open"); $("#header").classList.toggle("menu-open"); };
+$$("#nav a").forEach(a => a.addEventListener("click", () => { $("#nav").classList.remove("open"); $("#header").classList.remove("menu-open"); }));
 $$(".magnetic").forEach(b => { b.onmousemove = e => { let r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .08}px,${(e.clientY - r.top - r.height / 2) * .08}px)` }; b.onmouseleave = () => b.style.transform = "" });
 $$(".tabs button").forEach(btn => btn.onclick = () => { $$(".tabs button").forEach(x => x.classList.remove("active")); $$(".tab-content").forEach(x => x.classList.remove("active")); btn.classList.add("active"); $("#" + btn.dataset.tab).classList.add("active") });
 const qs = ["A premium patient experience starts with feeling heard, understood and guided.", "Clear information can turn a confusing health journey into a confident next step.", "Specialist care should feel clinical, human and easy to access."], q = $("#quote"); let qi = 0;
 function setQ() { q.style.opacity = 0; setTimeout(() => { q.textContent = qs[qi]; q.style.opacity = 1 }, 180) } $("#next").onclick = () => { qi = (qi + 1) % qs.length; setQ() }; $("#prev").onclick = () => { qi = (qi - 1 + qs.length) % qs.length; setQ() };
 $("#form").onsubmit = e => { e.preventDefault(); $("#toast").classList.add("show"); setTimeout(() => $("#toast").classList.remove("show"), 4000) };
-document.querySelectorAll('a[href^="#"]').forEach(a => a.onclick = e => { let id = a.getAttribute("href"); if (id != "#" && document.querySelector(id)) { e.preventDefault(); document.querySelector(id).scrollIntoView({ behavior: "smooth" }) } });
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener("click", e => { let id = a.getAttribute("href"); if (id != "#" && document.querySelector(id)) { e.preventDefault(); document.querySelector(id).scrollIntoView({ behavior: "smooth" }) } }));
