@@ -630,9 +630,36 @@ section {
     color: #192323;
 }
 
-.clinic-dark-bg {
-    background: #0b0c10 !important;
-    /* Premium dark/black background */
+.clinic-white-bg {
+    background: #ffffff !important;
+}
+
+.clinic-white-bg .clinic-heading {
+    color: #000000 !important;
+}
+
+.clinic-white-bg .detail-wrap {
+    background: #f7f7f7 !important;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.clinic-white-bg .clinic-text, 
+.clinic-white-bg .detail-item small,
+.clinic-white-bg .detail-item a {
+    color: #333333 !important;
+}
+
+.clinic-white-bg .detail-item {
+    border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+}
+
+.clinic-white-bg .dark-map {
+    filter: none !important;
+}
+
+.dark-map {
+    filter: invert(90%) hue-rotate(180deg) grayscale(30%) contrast(95%);
 }
 
 .clinic-heading {
@@ -846,50 +873,64 @@ section {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    border-top: 1px solid var(--line)
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
 }
 
 .service-grid article {
-    min-height: 210px;
-    padding: 28px;
-    border-bottom: 1px solid var(--line);
-    transition: .4s;
-    position: relative
-}
-
-.service-grid article:nth-child(odd) {
-    border-right: 1px solid var(--line)
+    min-height: 230px;
+    padding: 35px;
+    background: linear-gradient(145deg, #11131a, #080a0e);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    transition: all 0.4s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-grid article:hover {
-    background: linear-gradient(90deg, rgba(214, 180, 119, .05), rgba(139, 92, 246, .05));
-    padding-left: 38px
+    transform: translateY(-10px);
+    border-color: rgba(214, 180, 119, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(145deg, #161922, #0a0c12);
 }
 
 .service-grid span {
-    font-size: 9px;
-    color: #666873
+    font-size: 11px;
+    color: var(--gold);
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+    display: block;
 }
 
 .service-grid h3 {
-    font: 700 24px "Playfair Display";
-    margin: 25px 0 10px
+    font: 700 26px "Playfair Display";
+    color: var(--white);
+    margin: 0 0 12px;
 }
 
 .service-grid p {
-    max-width: 500px;
-    color: #85868e;
-    font-size: 12px;
-    line-height: 1.6
+    color: #8f9098;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
 }
 
 .service-grid article>b {
     position: absolute;
-    right: 28px;
-    top: 28px;
+    right: 30px;
+    top: 30px;
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 20px;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-grid article:hover>b {
     color: var(--gold);
-    font-size: 20px
+    transform: translate(4px, -4px) scale(1.1);
 }
 
 .marquee {
@@ -921,26 +962,31 @@ section {
 }
 
 .condition-grid article {
-    min-height: 245px;
-    padding: 24px;
-    border: 1px solid var(--line);
-    border-radius: 22px;
-    background: #11131a;
+    min-height: 250px;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 24px;
+    background-color: rgba(10, 12, 16, 0.85); /* Dark overlay */
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
-    transition: .4s
+    justify-content: flex-end;
+    transition: all 0.5s ease;
+    overflow: hidden;
 }
 
 .condition-grid article:hover {
-    transform: translateY(-7px);
-    border-color: rgba(214, 180, 119, .35);
-    box-shadow: var(--shadow)
+    transform: translateY(-8px);
+    border-color: rgba(214, 180, 119, 0.5);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    background-color: rgba(10, 12, 16, 0.65); /* Lighten slightly on hover */
 }
 
 .condition-grid .featured {
     grid-row: span 2;
-    min-height: 502px;
-    background: linear-gradient(145deg, #181225, #101117)
+    min-height: 520px;
 }
 
 .condition-grid small {
