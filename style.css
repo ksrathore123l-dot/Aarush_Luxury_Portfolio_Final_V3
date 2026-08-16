@@ -1539,6 +1539,51 @@ footer>div>p {
         padding: 50px 0
     }
 
+    /* About Section Mobile Centering */
+    .about-copy, .about-card {
+        text-align: center;
+    }
+    .about-copy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about p {
+        text-align: center;
+    }
+    .stats {
+        text-align: center;
+        justify-content: center;
+    }
+    .stats div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 5px;
+    }
+    .stats strong {
+        font-size: 20px;
+    }
+    .profile-photo {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 320px;
+    }
+    .tab-content div {
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+    }
+    .tab-content span {
+        text-align: center;
+    }
+    .tabs {
+        justify-content: center;
+    }
+    .outline-btn {
+        margin: 15px auto 0;
+    }
+
     .hero h1 {
         font-size: clamp(30px, 8vw, 40px);
     }
